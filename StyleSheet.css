@@ -1,0 +1,182 @@
+/*フォント、文字サイズ、中央ぞろえ*/
+:root {
+  --primary-deep: #4e7682;
+  --primary-light: #eaf7fb;
+  --theme-color: #8daeb8;
+  --scratch-orange: #ffab19;
+  --turbowarp-red: #ff4d4d;
+  --white: #ffffff;
+  --black: #333333;
+  --gray: #a7a7a7;
+  --h1-size: 30px;
+  --h2-size: 25px;
+  --h3-size: 20px;
+  --normal-size: 17px;
+  --big-size: 33px;
+  --small-size: 14px;
+}
+
+* {
+  margin: 0px;
+  font-size: var(--normal-size);
+  line-height: 1.7em;
+  
+  box-sizing: border-box;
+}
+
+h1, h2, h3, .block-link {
+  line-height: 1.5em;
+}
+
+:where(:is(.wrapper, body)>*:not(#footer)) {
+  margin-bottom: 20px;
+}
+
+a:focus-visible {
+  outline: dashed 2px var(--primary-deep);
+  border-radius: 3px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans JP";
+  background-color: var(--white);
+  -webkit-text-size-adjust: 100%;
+  color: var(--black);
+}
+
+h1 {
+  font-size: var(--h1-size);
+  font-weight: bold;
+}
+
+h1:not(.page-title-text) {
+  padding-left: 10px;
+  border-left: double 9px var(--primary-deep);
+}
+
+h2 {
+  font-size: var(--h2-size);
+  font-weight: bold;
+  border-bottom: solid 1.5px var(--primary-deep);
+}
+
+h3 {
+  font-size: var(--h3-size);
+  font-weight: bold;
+  border-bottom: dashed 1.5px var(--primary-deep);
+}
+
+div, header, footer {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  font-size: 0;
+}
+
+ul.dot {
+  list-style: "・";
+}
+
+ul * {
+  font-size: var(--normal-size);
+}
+
+p, a {
+  font-size: var(--normal-size);
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+dt::before {
+  content: "【";
+}
+
+dt::after {
+  content: "】";
+}
+
+rt {
+  font-size: 12px;
+  text-align: center;
+  transform: translateY(-5px);
+}
+
+/*ボタン系リンク土台*/
+.block-link {
+  color: var(--black);
+}
+
+/*テキストリンク*/
+a:not(.block-link) {
+  color: var(--primary-deep);
+  word-break: break-all;
+}
+
+a:not(.block-link):hover {
+  color: var(--black);
+}
+
+time {
+  font-size: var(--normal-size);
+  display: inline-block;
+  font-weight: normal;
+  color: var(--gray);
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: min(100%, 35em);
+}
+
+/*文字装飾系*/
+.big {
+  font-size: var(--big-size);
+}
+
+.small {
+  font-size: var(--small-size);
+}
+
+.normal {
+  font-size: var(--normal-size);
+}
+
+.delete {
+  text-decoration: line-through;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.h1-size {
+  font-size: var(--h1-size);
+}
+
+.h2-size {
+  font-size: var(--h2-size);
+}
+
+.h3-size {
+  font-size: var(--h3-size);
+}
+
+.light {
+  color: var(--gray);
+}
